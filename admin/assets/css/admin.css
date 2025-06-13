@@ -1,0 +1,395 @@
+/* ملف الأنماط الرئيسي للوحة التحكم - إصدار محسّن */
+:root {
+    --primary: #1E3A8A;
+    --primary-dark: #152C69;
+    --primary-light: #3B82F6;
+    --secondary: #6C757D;
+    --success: #28A745;
+    --info: #17A2B8;
+    --warning: #FFC107;
+    --danger: #DC3545;
+    --light: #F8F9FA;
+    --dark: #343A40;
+    --sidebar-width: 250px;
+    --sidebar-collapsed-width: 70px;
+}
+
+/* أنماط عامة */
+body {
+    font-family: 'Cairo', sans-serif;
+    text-align: right;
+    direction: rtl;
+    background-color: #F4F6F9;
+    min-height: 100vh;
+}
+
+/* تحسينات للروابط */
+a {
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* تحسينات للعناوين */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+/* تحسينات للبطاقات */
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+}
+
+.card-header {
+    background-color: white;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    padding: 15px 20px;
+    border-radius: 10px 10px 0 0 !important;
+}
+
+.card-title {
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+/* تحسينات للأزرار */
+.btn {
+    border-radius: 6px;
+    padding: 8px 20px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-dark);
+    border-color: var(--primary-dark);
+}
+
+.btn-outline-primary {
+    color: var(--primary);
+    border-color: var(--primary);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+/* تحسينات للجداول */
+.table {
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #212529;
+    border-collapse: collapse;
+}
+
+.table th {
+    background-color: #F8F9FA;
+    border-bottom: 2px solid #DEE2E6;
+    text-align: right;
+    padding: 12px;
+}
+
+.table td {
+    padding: 12px;
+    vertical-align: middle;
+    border-top: 1px solid #DEE2E6;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(0, 0, 0, 0.02);
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgba(0, 0, 0, 0.03);
+}
+
+/* تحسينات للنماذج */
+.form-control {
+    border-radius: 6px;
+    padding: 10px 15px;
+    border: 1px solid #DEE2E6;
+    transition: all 0.3s ease;
+    text-align: right;
+}
+
+.form-control:focus {
+    border-color: var(--primary-light);
+    box-shadow: 0 0 0 0.2rem rgba(30, 58, 138, 0.25);
+}
+
+.custom-select {
+    text-align: right;
+}
+
+.custom-file-label {
+    text-align: right;
+    padding: 10px 15px;
+}
+
+.custom-file-label::after {
+    right: auto;
+    left: 0;
+    border-left: none;
+    border-right: 1px solid #DEE2E6;
+}
+
+/* تحسينات للتنبيهات */
+.alert {
+    border-radius: 6px;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    border: none;
+}
+
+.alert-success {
+    background-color: #D4EDDA;
+    color: #155724;
+}
+
+.alert-danger {
+    background-color: #F8D7DA;
+    color: #721C24;
+}
+
+.alert-warning {
+    background-color: #FFF3CD;
+    color: #856404;
+}
+
+.alert-info {
+    background-color: #D1ECF1;
+    color: #0C5460;
+}
+
+/* تحسينات للشريط الجانبي */
+.main-sidebar {
+    background-color: var(--primary);
+    width: var(--sidebar-width);
+    right: 0;
+    left: auto;
+}
+
+.sidebar {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.nav-sidebar .nav-item .nav-link {
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 2px;
+    border-radius: 0 50px 50px 0;
+}
+
+.nav-sidebar .nav-item .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+.nav-sidebar .nav-item .nav-link.active {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.nav-sidebar .nav-treeview {
+    padding-right: 20px;
+    padding-left: 0;
+}
+
+.nav-sidebar .nav-treeview .nav-item .nav-link {
+    border-radius: 0 30px 30px 0;
+}
+
+.brand-link {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+}
+
+.user-panel {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* تحسينات للشريط العلوي */
+.main-header {
+    border-bottom: 1px solid #DEE2E6;
+    background-color: white;
+}
+
+.navbar-nav .dropdown-menu {
+    right: 0;
+    left: auto;
+    text-align: right;
+}
+
+/* تحسينات للمحتوى الرئيسي */
+.content-wrapper {
+    margin-right: var(--sidebar-width);
+    margin-left: 0;
+    min-height: calc(100vh - 57px);
+}
+
+.content-header {
+    padding: 15px 0;
+}
+
+.breadcrumb {
+    padding: 0;
+    margin-bottom: 0;
+    background-color: transparent;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+    float: right;
+    padding-left: 0.5rem;
+    padding-right: 0;
+}
+
+/* تحسينات للفوتر */
+.main-footer {
+    background-color: white;
+    border-top: 1px solid #DEE2E6;
+    padding: 15px;
+    margin-right: var(--sidebar-width);
+    margin-left: 0;
+}
+
+/* تحسينات للوسائط المتعددة */
+.img-thumbnail {
+    border-radius: 6px;
+    padding: 4px;
+    background-color: #FFF;
+    border: 1px solid #DEE2E6;
+}
+
+/* تحسينات للعلامات */
+.badge {
+    font-weight: 500;
+    padding: 5px 10px;
+    border-radius: 50px;
+}
+
+.badge-primary {
+    background-color: var(--primary);
+}
+
+/* تحسينات للتبويبات */
+.nav-tabs {
+    border-bottom: 1px solid #DEE2E6;
+}
+
+.nav-tabs .nav-link {
+    border: 1px solid transparent;
+    border-radius: 6px 6px 0 0;
+    margin-left: 5px;
+    margin-right: 0;
+}
+
+.nav-tabs .nav-link.active {
+    border-color: #DEE2E6 #DEE2E6 #FFF;
+    border-top: 3px solid var(--primary);
+}
+
+/* تحسينات للصفحات الصغيرة */
+@media (max-width: 991.98px) {
+    .content-wrapper, .main-footer {
+        margin-right: 0;
+    }
+    
+    .main-sidebar {
+        transform: translateX(var(--sidebar-width));
+    }
+    
+    .sidebar-open .main-sidebar {
+        transform: translateX(0);
+    }
+}
+
+@media (max-width: 767.98px) {
+    .content-header {
+        flex-direction: column;
+    }
+    
+    .content-header h1 {
+        font-size: 1.5rem;
+    }
+    
+    .card {
+        margin-bottom: 15px;
+    }
+    
+    .table-responsive {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+/* تحسينات خاصة بالعرض RTL */
+.custom-control {
+    padding-right: 1.5rem;
+    padding-left: 0;
+}
+
+.custom-control-label::before, 
+.custom-control-label::after {
+    right: 0;
+    left: auto;
+}
+
+.custom-switch .custom-control-label::after {
+    right: 2px;
+    left: auto;
+}
+
+.custom-switch .custom-control-input:checked ~ .custom-control-label::after {
+    transform: translateX(-1.25rem);
+}
+
+/* تحسينات لشريط التقدم */
+.progress {
+    height: 10px;
+    border-radius: 5px;
+}
+
+.progress-bar {
+    background-color: var(--primary);
+}
+
+/* تحسينات للعناصر المخصصة */
+.preview-image {
+    max-width: 200px;
+    max-height: 200px;
+    border-radius: 6px;
+    display: none;
+    margin: 10px 0;
+}
+
+/* تحسينات للعرض المطبوع */
+@media print {
+    .no-print {
+        display: none !important;
+    }
+    
+    .content-wrapper {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    
+    .card {
+        box-shadow: none !important;
+        border: 1px solid #DEE2E6 !important;
+    }
+}
